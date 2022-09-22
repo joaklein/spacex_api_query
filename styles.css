@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(500rem 50rem at bottom, lightblue, black) fixed;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    margin: .5rem 0;
+}
+
+a, a:active, a:visited {
+    color: lightblue;
+    text-decoration: none;
+}
+
+header {
+    padding: .5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #000;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    gap: .5rem;
+    justify-content: space-evenly;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    align-items: center;
+}
+
+input {
+    height: 2rem;
+    border-radius: 5px;
+    padding: 0;
+    border: none;
+}
+
+button {
+    width: 4rem;
+    height: 2rem;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.scroll-to-top {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 3rem;
+    height: 3rem;
+    background: #000;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.scroll-to-top:hover {
+    rotate: 360deg;
+    scale: 1.1;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+.launches {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5rem;
+    padding: 1rem;
+    margin-top: 4rem;
+    max-width: 1200px;
+}
+
+.launch {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    border: 1px solid lightblue;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.launch-number {
+    font-size: .8rem;
+}
+
+.launch-name {
+    text-align: center;
+    background: lightblue;
+    color: #000;
+}
+
+.launch-webcast {
+    border: 1px solid lightblue;
+    height: 2rem;
+    border-radius: 100rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 175px;
+    margin: 0 auto;
+    transition: 0.2s ease-in-out;
+}
+
+.launch-webcast:hover {
+    background: lightblue;
+    color: #000;
+}
+
+.launch-notes-header {
+    text-align: center;
+}
+
+.launch-notes {
+    max-height: 10.5rem;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
