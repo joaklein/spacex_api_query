@@ -49,7 +49,7 @@ form {
 input {
     height: 2rem;
     border-radius: 5px;
-    padding: 0;
+    padding: 0 .5rem;
     border: none;
 }
 
@@ -59,6 +59,8 @@ button {
     padding: 0;
     border: none;
     border-radius: 5px;
+    background: lightblue;
+    cursor: pointer;
 }
 
 .scroll-to-top {
@@ -87,7 +89,7 @@ section {
     justify-content: center;
 }
 
-.launches {
+[data-launches] {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: .5rem;
@@ -96,7 +98,7 @@ section {
     max-width: 1200px;
 }
 
-.launch {
+[data-launch] {
     background: rgba(0, 0, 0, 0.7);
     padding: 1rem;
     border: 1px solid lightblue;
@@ -105,17 +107,17 @@ section {
     gap: .5rem;
 }
 
-.launch-number {
+[data-launch-number] {
     font-size: .8rem;
 }
 
-.launch-name {
+[data-launch-name] {
     text-align: center;
     background: lightblue;
     color: #000;
 }
 
-.launch-webcast {
+[data-launch-webcast] {
     border: 1px solid lightblue;
     height: 2rem;
     border-radius: 100rem;
@@ -127,17 +129,21 @@ section {
     transition: 0.2s ease-in-out;
 }
 
-.launch-webcast:hover {
+[data-launch-webcast]:hover {
     background: lightblue;
     color: #000;
 }
 
-.launch-notes-header {
+[data-launch-notes-header] {
     text-align: center;
 }
 
-.launch-notes {
+[data-launch-notes] {
     max-height: 10.5rem;
     overflow-y: scroll;
     scrollbar-width: thin;
+}
+
+.hide {
+    display: none;
 }
