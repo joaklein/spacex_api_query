@@ -15,7 +15,7 @@
 
         <form action="">
             <label for="search">Search</label>
-            <input type="search" name="search" id="search" placeholder="Search Terms" maxlength="50" data-search>
+            <input type="search" name="search" id="search" placeholder="Search Terms" maxlength="50">
             <label for="start-date">From</label>
             <input type="date" name="start-date" id="start-date" min="2006-03-25" max="2050-12-31">
             <label for="end-date">To</label>
@@ -29,17 +29,17 @@
     <section>
         <div class="launches" data-launches>
 
-            <template data-launch-template>
-                <div data-launch>
-                    <p data-launch-number>Flight </p>
-                    <h1 data-launch-name></h1>
-                    <p data-rocket-id>Rocket ID: </p>
-                    <p data-launch-date>Launch Date</p>
-                    <p data-launch-capsules>Capsules: </p>
-                    <p data-launch-cores>Cores: </p>
-                    <a href="" target="_blank" class="launch-webcast" data-launch-webcast>Webcast</a>
-                    <h3 class="hide" data-launch-notes-header>Notes</h3>
-                    <p data-launch-notes></p>
+            <template id="launch-template">
+                <div class="launch">
+                    <p class="launch-number">Flight </p>
+                    <h1 class="launch-name"></h1>
+                    <p class="rocket-id">Rocket ID: </p>
+                    <p class="launch-date">Launch Date</p>
+                    <p class="launch-capsules">Capsules: </p>
+                    <p class="launch-cores">Cores: </p>
+                    <a href="" target="_blank" class="launch-webcast">Webcast</a>
+                    <h3 class="launch-notes-header hide">Notes</h3>
+                    <p class="launch-notes"></p>
                 </div>
             </template>
 

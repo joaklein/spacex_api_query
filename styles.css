@@ -89,7 +89,7 @@ section {
     justify-content: center;
 }
 
-[data-launches] {
+.launches {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: .5rem;
@@ -98,7 +98,7 @@ section {
     max-width: 1200px;
 }
 
-[data-launch] {
+.launch {
     background: rgba(0, 0, 0, 0.7);
     padding: 1rem;
     border: 1px solid lightblue;
@@ -107,17 +107,17 @@ section {
     gap: .5rem;
 }
 
-[data-launch-number] {
+.launch-number {
     font-size: .8rem;
 }
 
-[data-launch-name] {
+.launch-name {
     text-align: center;
     background: lightblue;
     color: #000;
 }
 
-[data-launch-webcast] {
+.launch-webcast {
     border: 1px solid lightblue;
     height: 2rem;
     border-radius: 100rem;
@@ -129,16 +129,16 @@ section {
     transition: 0.2s ease-in-out;
 }
 
-[data-launch-webcast]:hover {
+.launch-webcast:hover {
     background: lightblue;
     color: #000;
 }
 
-[data-launch-notes-header] {
+.launch-notes-header {
     text-align: center;
 }
 
-[data-launch-notes] {
+.launch-notes {
     max-height: 10.5rem;
     overflow-y: scroll;
     scrollbar-width: thin;

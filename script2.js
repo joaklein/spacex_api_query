@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const cardContainer = document.querySelector('[data-launches]')
-    const cardTemplate = document.querySelector('[data-launch-template]')
+    const cardContainer = document.querySelector('.launches')
+    const cardTemplate = document.querySelector('#launch-template')
     let startDate = document.querySelector('#start-date').value;
     let endDate = document.querySelector('#end-date').value;
     let launches = []
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.scrollTop = 0
     })
 
-    document.querySelector('[data-search]').addEventListener('input', e => {
+    document.querySelector('#search').addEventListener('input', e => {
         const value = e.target.value.toLowerCase()
         launches.forEach(launch => {
             const isVisible = launch.name.toLowerCase().includes(value)
@@ -26,20 +26,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 const card = cardTemplate.content.cloneNode(true).children[0]
                 if (launch.date_local > startDate && launch.date_local < endDate) {
 
-                    card.querySelector('[data-launch-number]').textContent += launch.flight_number
-                    card.querySelector('[data-launch-name]').textContent += launch.name
-                    card.querySelector('[data-rocket-id]').textContent += launch.rocket
-                    card.querySelector('[data-launch-date]').textContent += launch.date_local
-                    card.querySelector('[data-launch-capsules]').textContent += launch.capsules.length
-                    card.querySelector('[data-launch-cores]').textContent += launch.cores.length
+                    card.querySelector('.launch-number').textContent += launch.flight_number
+                    card.querySelector('.launch-name').textContent += launch.name
+                    card.querySelector('.rocket-id').textContent += launch.rocket
+                    card.querySelector('.launch-date').textContent += launch.date_local
+                    card.querySelector('.launch-capsules').textContent += launch.capsules.length
+                    card.querySelector('.launch-cores').textContent += launch.cores.length
 
                     if (launch.links.webcast !== null) {
-                        card.querySelector('[data-launch-webcast').href += launch.links.webcast
+                        card.querySelector('.launch-webcast').href += launch.links.webcast
                     }
 
                     if (launch.details !== null) {
-                        card.querySelector('[data-launch-notes-header]').classList.toggle('hide')
-                        card.querySelector('[data-launch-notes]').textContent += launch.details
+                        card.querySelector('.launch-notes-header').classList.toggle('hide')
+                        card.querySelector('.launch-notes').textContent += launch.details
                     }
 
                     cardContainer.append(card)
