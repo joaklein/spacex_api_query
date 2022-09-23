@@ -7,7 +7,7 @@ body {
     margin: 0;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
-    background: radial-gradient(500rem 50rem at bottom, lightblue, black) fixed;
+    background: radial-gradient(500rem 50rem at bottom, lightblue, black 40%) fixed;
 }
 
 h1, h2, p {

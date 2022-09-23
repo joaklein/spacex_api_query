@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     card.querySelector('[data-launch-name]').textContent += launch.name
                     card.querySelector('[data-rocket-id]').textContent += launch.rocket
                     card.querySelector('[data-launch-date]').textContent += launch.date_local
-                    card.querySelector('[data-launch-capsules').textContent += launch.capsules.length
-                    card.querySelector('[data-launch-cores').textContent += launch.cores.length
+                    card.querySelector('[data-launch-capsules]').textContent += launch.capsules.length
+                    card.querySelector('[data-launch-cores]').textContent += launch.cores.length
 
                     if (launch.links.webcast !== null) {
                         card.querySelector('[data-launch-webcast').href += launch.links.webcast
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     if (launch.details !== null) {
                         card.querySelector('[data-launch-notes-header]').classList.toggle('hide')
-                        card.querySelector('[data-launch-notes').textContent += launch.details
+                        card.querySelector('[data-launch-notes]').textContent += launch.details
                     }
 
                     cardContainer.append(card)
