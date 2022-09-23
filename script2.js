@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     card.querySelector('.launch-number').textContent += launch.flight_number
                     card.querySelector('.launch-name').textContent += launch.name
                     card.querySelector('.rocket-id').textContent += launch.rocket
-                    card.querySelector('.launch-date').textContent += launch.date_local
+                    card.querySelector('.launch-date').textContent += new Date(launch.date_local).toLocaleString()
                     card.querySelector('.launch-capsules').textContent += launch.capsules.length
                     card.querySelector('.launch-cores').textContent += launch.cores.length
 
