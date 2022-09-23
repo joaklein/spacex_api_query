@@ -34,7 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     card.querySelector('.launch-cores').textContent += launch.cores.length
 
                     if (launch.links.webcast !== null) {
-                        card.querySelector('.launch-webcast').href += launch.links.webcast
+                        card.querySelector('.launch-webcast').classList.toggle('hide')
+                        card.querySelector('.launch-webcast').href = launch.links.webcast
                     }
 
                     if (launch.details !== null) {
