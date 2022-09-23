@@ -39,7 +39,7 @@ header {
     justify-content: space-evenly;
 }
 
-form {
+#search-form {
     display: flex;
     justify-content: center;
     gap: .5rem;
@@ -61,6 +61,21 @@ button {
     border-radius: 5px;
     background: lightblue;
     cursor: pointer;
+}
+
+.mobile-toggle {
+    position: absolute;
+    right: 0;
+    bottom: -3rem;
+    width: 3rem;
+    height: 3rem;
+    background: #000;
+    border: 1px solid #fff;
+    border-radius: 0 0 0 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
 }
 
 .scroll-to-top {
@@ -146,4 +161,38 @@ section {
 
 .hide {
     display: none;
+}
+
+@media (max-width: 1028px) {
+    .launches {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mobile-toggle {
+        display: flex;
+    }
+
+    #search-form {
+        display: none;
+        flex-direction: column;
+        transition: 0.2s linear;
+    }
+
+    .scroll-to-top {
+        right: 0;
+        bottom: 0;
+        border-radius: 50% 0 0 0;
+    }
+}
+
+@media (max-width: 575px) {
+
+    .launches {
+        grid-template-columns: 1fr;
+    }
 }

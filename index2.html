@@ -7,21 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>SpaceX Launch Query</title>
+    <script src="https://kit.fontawesome.com/dd510d8712.js" defer></script>
 </head>
 
 <body>
     <header>
         <h1>SpaceX Launch Query</h1>
 
-        <form action="">
-            <label for="search">Search</label>
-            <input type="search" name="search" id="search" placeholder="Search Terms" maxlength="50">
-            <label for="start-date">From</label>
-            <input type="date" name="start-date" id="start-date" min="2006-03-25" max="2050-12-31">
-            <label for="end-date">To</label>
-            <input type="date" name="end-date" id="end-date" min="2006-03-25" max="2050-12-31">
+        <form action="" id="search-form">
+            <div class="search">
+                <label for="search">Search</label>
+                <input type="search" name="search" id="search" placeholder="Search Terms" maxlength="50">
+            </div>
+            <div class="dates">
+                <label for="start-date">From</label>
+                <input type="date" name="start-date" id="start-date" min="2006-03-25" max="2050-12-31">
+                <label for="end-date">To</label>
+                <input type="date" name="end-date" id="end-date" min="2006-03-25" max="2050-12-31">
+            </div>
             <button type="submit">Go!</button>
         </form>
+
+        <div class="mobile-toggle"><i class="fa-solid fa-chevron-down"></i></div>
     </header>
 
     <div class="scroll-to-top">Top</div>

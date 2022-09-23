@@ -19,6 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
+    document.querySelector('.mobile-toggle').addEventListener('click', () => {
+        const searchForm = document.querySelector('#search-form')
+        const mobileToggle = document.querySelector('.mobile-toggle')
+        if (searchForm.style.display != 'flex') {
+            searchForm.style.display = 'flex'
+            mobileToggle.firstChild.classList.replace('fa-chevron-down', 'fa-chevron-up')
+        } else {
+            searchForm.style.display = 'none'
+            mobileToggle.firstChild.classList.replace('fa-chevron-up', 'fa-chevron-down')
+        }
+    })
+
     document.querySelector('form').addEventListener('submit', (event) => {
         event.preventDefault()
         fetch('https://api.spacexdata.com/v4/launches').then(res => res.json()).then(data => {
