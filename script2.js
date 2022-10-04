@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('form').addEventListener('submit', (event) => {
         event.preventDefault()
+        cardContainer.innerHTML = ``
         fetch('https://api.spacexdata.com/v4/launches').then(res => res.json()).then(data => {
             launches = data.map(launch => {
                 const card = cardTemplate.content.cloneNode(true).children[0]
@@ -61,9 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
             })
 
         })
-        .catch(e => {
-            console.log(e)
-        })
+            .catch(e => {
+                console.log(e)
+            })
 
     })
 
