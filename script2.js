@@ -61,6 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
             })
 
         })
+        .catch(e => {
+            console.log(e)
+        })
 
     })
 
