@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const cardContainer = document.querySelector('.launches')
     const cardTemplate = document.querySelector('#launch-template')
-    let startDate = document.querySelector('#start-date').value;
-    let endDate = document.querySelector('#end-date').value;
     let launches = []
 
     document.querySelector('.scroll-to-top').addEventListener('click', () => {
@@ -33,10 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('form').addEventListener('submit', (event) => {
         event.preventDefault()
+        let startDate = document.querySelector('#start-date').value;
+        let endDate = document.querySelector('#end-date').value;    
         cardContainer.innerHTML = ``
         fetch('https://api.spacexdata.com/v4/launches').then(res => res.json()).then(data => {
             launches = data.map(launch => {
-                const card = cardTemplate.content.cloneNode(true).children[0]
+                let card = cardTemplate.content.cloneNode(true).children[0]
                 if (launch.date_local > startDate && launch.date_local < endDate) {
 
                     card.querySelector('.launch-number').textContent += launch.flight_number
